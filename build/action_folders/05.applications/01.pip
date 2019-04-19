@@ -1,0 +1,5 @@
+#!/bin/bash
+
+PATH=$PATH:/usr/local/bin
+#python get-pip.py --prefix=/usr/local
+#pip --version

@@ -1,0 +1,4 @@
+# java Packages
+
+declare -a PKGS=( python2
+                  py-pip )
