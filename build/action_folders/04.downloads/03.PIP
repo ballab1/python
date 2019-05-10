@@ -3,7 +3,13 @@
 declare -A PIP=()
 PIP['version']=${PIP_VERSION:?}
 PIP['file']="/tmp/get-pip.py"
-PIP['url']="https://bootstrap.pypa.io/get-pip.py"
-PIP['sha256']="efe99298f3fbb1f56201ce6b81d2658067d2f7d7dfc2d412e0d3cacc9a397c61"
-#PIP['sha256_19.03']="9ce9455c8e84535b28b155ab9c7bdb270a15044a41562843cb1593b7fc91e86a"
-#PIP['sha256']="${PIP['sha256_'${PIP['version']}]}"
+
+PIP['commit_19.0.3']="fee32c376da1ff6496a798986d7939cd51e1644f"
+PIP['commit_19.1']="fcebcece42c637c3e644556c13d0de1ec4a1053c"
+
+#PIP['url']="https://bootstrap.pypa.io/get-pip.py"
+PIP['url']="https://github.com/pypa/get-pip/blob/${PIP['commit_'${PIP['version']}]}/get-pip.py"
+
+PIP['sha256_19.03']="9ce9455c8e84535b28b155ab9c7bdb270a15044a41562843cb1593b7fc91e86a"
+PIP['sha256_19.1']="553567665f2a019c03302b0f6e00c29348cc36f4e296cae649e3a0707335be33"
+PIP['sha256']="${PIP['sha256_'${PIP['version']}]}"

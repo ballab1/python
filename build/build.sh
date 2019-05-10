@@ -61,7 +61,7 @@ if [ -d "$cbf_dir" ]; then
 elif [ "$CBF_VERSION" ]; then
     # since no CBF directory located, attempt to download CBF based on specified verion
     CBF_TGZ=/tmp/cbf.tar.gz
-    CBF_URL="https://afeoscyc-mw.cec.lab.emc.com/artifactory/cyclone-devops/cyclone-devops/container_build_framework/${CBF_VERSION}.tar.gz"
+    CBF_URL="https://github.com/ballab1/container_build_framework/archive/${CBF_VERSION}.tar.gz"
     echo "Downloading CBF:$CBF_VERSION from $CBF_URL"
 
     if [ "$(type wget)" ]; then

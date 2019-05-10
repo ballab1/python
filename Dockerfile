@@ -1,4 +1,4 @@
-ARG FROM_BASE=${DOCKER_REGISTRY:-afeoscyc-mw.cec.lab.emc.com/}${DEV_TEAM:-devops/}${CONTAINER_OS:-alpine}/base_container:${BASE_TAG:-latest}
+ARG FROM_BASE=${DOCKER_REGISTRY:-ubuntu-s2:5000/}${CONTAINER_OS:-alpine}/base_container:${BASE_TAG:-latest} 
 FROM $FROM_BASE
 
 # name and version of this docker image
@@ -17,7 +17,7 @@ ENV DEBUG_TRACE=0
 # java version being bundled in this docker image
 ARG PYTHON_VERSION=2.7
 LABEL version.java=$PYTHON_VERSION
-ARG PIP_VERSION=18.0
+ARG PIP_VERSION=19.1
 LABEL version.pip=$PIP_VERSION
 
 
