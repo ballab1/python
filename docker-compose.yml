@@ -9,7 +9,7 @@ services:
                 FROM_BASE: ${DOCKER_REGISTRY:-ubuntu-s2:5000/}${CONTAINER_OS:-alpine}/base_container:${BASE_TAG:-latest} 
                 PYTHON_VERSION: ${PYTHON_VERSION:-8.171.11-r0}
             cache_from:
-                - ${DOCKER_REGISTRY:-ubuntu-s2:5000/}${CONTAINER_OS:-alpine}:${OS_VERSION:-3.8}
+                - ${DOCKER_REGISTRY:-ubuntu-s2:5000/}thirdparty/${CONTAINER_OS:-alpine}:${OS_VERSION:-3.8}
                 - ${DOCKER_REGISTRY:-ubuntu-s2:5000/}${CONTAINER_OS:-alpine}/base_container:${BASE_TAG:-latest} 
             context: .
             dockerfile: Dockerfile
