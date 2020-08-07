@@ -1,4 +1,4 @@
 # java Packages
 
-declare -a PKGS=( python2
+declare -a PKGS=( python3
                   py-pip )
