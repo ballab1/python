@@ -1,5 +1,9 @@
 #!/bin/bash
 
+
+python --version ||:
+pip --version ||:
+
 # PIP versions: 
 # 0.2, 0.2.1, 0.3, 0.3.1, 0.4, 0.5, 0.5.1, 0.6, 0.6.1, 0.6.2, 0.6.3, 
 # 0.7, 0.7.1, 0.7.2, 0.8, 0.8.1, 0.8.2, 0.8.3, 1.0, 1.0.1, 1.0.2, 1.1,
@@ -21,16 +25,15 @@
 # 
 # ubuntu:  Python 2.7.15+
 # pip 18.0 from /root/.local/lib/python2.7/site-packages/pip (python 2.7)
-set -x
+#set -x
 
 declare v_pip=$PIP_VERSION
 unset PIP_VERSION
-if grep -e "$PYTHON_VERSION" <<< $(python --version 2>&1); then
+#if grep -e "$PYTHON_VERSION" <<< $(python --version 2>&1); then
     python -m pip install --user --upgrade pip=="$v_pip"
-    pip --version ||:
-else
-    trap.die 'Invalid version of python'
-fi
+#else
+#    trap.die 'Invalid version of python'
+#fi
 
 export PIP_VERSION=$v_pip
 which pip

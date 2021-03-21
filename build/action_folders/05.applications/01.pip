@@ -1,5 +1,4 @@
 #!/bin/bash
 
 PATH=$PATH:/usr/local/bin
-#python get-pip.py --prefix=/usr/local
-#pip --version
+[ -e /usr/local/bin/python ] || ln -s "$(which python3)" /usr/local/bin/python

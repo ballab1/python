@@ -15,7 +15,7 @@ ENV DEBUG_TRACE=0
 
 
 # java version being bundled in this docker image
-ARG PYTHON_VERSION=2.7
+ARG PYTHON_VERSION=3.8.5-r0
 LABEL version.java=$PYTHON_VERSION
 ARG PIP_VERSION=19.1
 LABEL version.pip=$PIP_VERSION
@@ -24,7 +24,7 @@ LABEL version.pip=$PIP_VERSION
 # build content
 RUN set -o verbose \
     && chmod u+rwx /tmp/build.sh \
-    && /tmp/build.sh "$CONTAINER_NAME" "$DEBUG_TRACE" \
+    && /tmp/build.sh "$CONTAINER_NAME" "$DEBUG_TRACE" "$TZ" \
     && ([ "$DEBUG_TRACE" != 0 ] || rm -rf /tmp/*)
 
 
