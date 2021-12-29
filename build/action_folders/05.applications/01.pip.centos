@@ -1,5 +1,0 @@
-#!/bin/bash
-
-unset PIP_VERSION
-yum install -y python-pip
-pip --version
