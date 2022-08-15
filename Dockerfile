@@ -15,7 +15,7 @@ ENV DEBUG_TRACE=0
 
 
 # java version being bundled in this docker image
-ARG PYTHON_VERSION=3.8.5-r0
+ARG PYTHON_VERSION=3.9.13-r1
 LABEL version.java=$PYTHON_VERSION
 ARG PIP_VERSION=19.1
 LABEL version.pip=$PIP_VERSION
